@@ -252,6 +252,218 @@ body {
   border-color: #000;
 }
 
+/* ===== SOBRE MAIN SECTION ===== */
+.sobre-main {
+  flex: 1;
+  padding: 3rem 2rem 6rem;
+  background: #ffffff;
+}
+
+.sobre-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sobre-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.sobre-photo {
+  width: 200px;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-text {
+  max-width: 800px;
+  text-align: center;
+}
+
+.sobre-text p {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* ===== GRID LAYOUT ===== */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-section {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  text-align: center;
+}
+
+.sobre-section h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* ===== TIMELINE - REMOVIDO ===== */
+.education-list{
+    display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+}
+
+.education-item {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.education-item:hover {
+  transform: translateX(8px);
+}
+
+.education-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.education-item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-size: 0.85rem;
+  color: #999;
+  font-weight: 500;
+}
+
+/* ===== EXPERIENCES ===== */
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.experience-item {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item:hover {
+  transform: translateX(8px);
+}
+
+.experience-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.experience-item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== SKILLS SECTION ===== */
+.sobre-skills {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.sobre-skills h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+}
+
+.skill-group h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  background: #f0f0f0;
+  color: #1a1a1a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid #e0e0e0;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.skill-tag:hover {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.skill-tag.highlight {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+.skill-tag.highlight:hover {
+  background: #333;
+  border-color: #333;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
@@ -279,6 +491,19 @@ body {
   .projeto-info h3 {
     font-size: 1.8rem;
   }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .sobre-intro h2 {
+    font-size: 2.4rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -304,6 +529,17 @@ body {
 
   .proyecto-info h3 {
     font-size: 1.6rem;
+  }
+
+  .sobre-header-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .sobre-photo {
+    width: 100%;
+    height: 250px;
   }
 }
 
@@ -333,5 +569,19 @@ body {
 
   .proyecto-info p {
     font-size: 0.95rem;
+  }
+
+  .sobre-main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .sobre-header-section {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .sobre-photo {
+    width: 100%;
+    height: 200px;
   }
 }
